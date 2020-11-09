@@ -17,7 +17,7 @@ export default function Home({ category, setCategory, categories, quizStarted, s
           <button onClick={() => setQuizStarted(true)} className="primary-button" disabled={!category}>
             {category && 
               <span className="emoji" aria-label="emoji" role="img">
-                {categories.find(c => c.name === category).emoji}
+                {categories && categories.find(c => c.name === category).emoji}
               </span>
             }
             {category ? 'Start ' + category + ' Quiz' : 'Choose Category'}
@@ -25,7 +25,7 @@ export default function Home({ category, setCategory, categories, quizStarted, s
         </div>
       </div>
       <div className="categories">
-        {categories.map(cat => 
+        {categories && categories.map(cat => 
           <Category 
             id={cat.name} 
             name={cat.name} 
