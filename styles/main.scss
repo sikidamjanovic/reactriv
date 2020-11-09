@@ -1,0 +1,122 @@
+@import './colors.scss';
+
+.background{
+    width: 100vw;
+    height: 100vh;
+    padding: 2em;
+    background: $darkBG;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}   
+
+.main{
+    border-radius: 5px;
+    width: 50%;
+    height: 100%;
+    padding: 2em;
+}
+
+.sidebar{
+    border-radius: 5px;
+    width: 25%;
+    height: 100%;
+    padding: 2em;
+}
+
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0em 1em;
+    height: 4em;
+}
+
+.header-text{
+    color: $white;
+    font-size: 1rem;
+}
+
+.button-group{
+    display: flex;
+    align-items: center;
+
+    .secondary-button:first-of-type{
+        margin-right: 0.5em;
+        color: $white;
+    }
+}
+
+button{
+    height: 40px;
+    display: flex;
+    align-items: center;
+    padding: 0em 1em;
+    font-weight: 600;
+    transition: 300ms;
+    line-height: 1;
+
+    &:hover{
+        background: $primary;
+        transform: scale(1.03);
+        cursor: pointer;
+    }
+    &:focus{
+        outline: none;;
+    }
+    &:disabled{
+        background: none;
+        color: $darkAccent;
+        &:hover{
+            transform: none;
+            cursor: initial;
+        }
+    }
+}
+
+.primary-button{
+    background: $primary;
+    color: $white;
+}
+
+.secondary-button{
+    background: $darkAccent;
+    color: $white;
+}
+
+.emoji{
+    margin-right: 0.5em;
+}
+
+.emoji-large{
+    font-size: 3rem;
+}
+
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Firefox < 16 */
+@-moz-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Safari, Chrome and Opera > 12.1 */
+@-webkit-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Internet Explorer */
+@-ms-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Opera < 12.1 */
+@-o-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}

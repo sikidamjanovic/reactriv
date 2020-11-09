@@ -1,0 +1,51 @@
+@import './colors.scss';
+
+.categories{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 2em 0em;
+}
+
+.category{
+    width: calc(33% - 1em);
+    height: 12em;
+    margin: 0.5em 0.5em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border-radius: 0.5em;
+    border: 2px solid $darkBG;
+    box-shadow: 0.5em 0.5em 2em rgba(0,0,0,0.1);
+    transition: 300ms;
+
+    -webkit-animation: fadein 2s; /* Safari, Chrome and Opera > 12.1 */
+    -moz-animation: fadein 2s; /* Firefox < 16 */
+     -ms-animation: fadein 2s; /* Internet Explorer */
+      -o-animation: fadein 2s; /* Opera < 12.1 */
+         animation: fadein 2s;
+
+    // Gradients
+    &:nth-child(1) {background-image: linear-gradient(to bottom right, #005C97, #363795);}
+    &:nth-child(2) {background-image: linear-gradient(to bottom right, #c31432, #240b36);}
+    &:nth-child(3) {background-image: linear-gradient(to bottom right, #6441A5, #2a0845);}
+    &:nth-child(4) {background-image: linear-gradient(to bottom right, #5A3F37, #3b2822);}
+    &:nth-child(5) {background-image: linear-gradient(to bottom right, #ffb347, #ca821d);}
+    &:nth-child(6) {background-image: linear-gradient(to bottom right, #363795, #005C97);}
+    &:nth-child(7) {background-image: linear-gradient(to bottom right, #200122, #6f0000);}
+    &:nth-child(8) {background-image: linear-gradient(to bottom right, #232526, #414345);}
+    &:nth-child(9) {background-image: linear-gradient(to bottom right, #028866, #00bf8f);}
+
+    &:hover{
+        transform: scale(1.03);
+        box-shadow: 0.5em 0.5em 2em rgba(0,0,0,0.2);
+        cursor: pointer;
+    }
+}
+
+.category-name{
+    font-size: 1rem;
+    font-weight: 500;
+    color: $white;
+}
