@@ -14,7 +14,7 @@ export default function Sidebar({ category, records, emoji, loading }) {
         </h1>
       </div> 
       <div className="records-list">
-        {!loading 
+        {!loading && records
           ? records.map((record, index) => 
               <Record 
                 key={index}
